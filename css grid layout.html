@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid layout</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-areas:
+
+            'header header header'
+
+            'menu main main'
+
+            'menu footer footer';
+            background-color: rgb(136, 255, 0);
+            padding: 10px; 
+            
+
+        }
+        .grid-container div{
+          background-color: rgba(5, 217, 255, 0.884);
+          border: 1px solid rgb(0, 0, 0);
+          padding: 20px;
+          text-align: center;
+
+        }
+        .grid-item1{
+            grid-area: header;
+        }
+         .grid-item2{
+            grid-area: menu;
+        }
+         .grid-item3{
+            grid-area: main
+            ;
+        }
+         .grid-item4{
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item1">Header</div>
+        <div class="grid-item2">menu</div>
+        <div class="grid-item3">main</div>
+        <div class="grid-item4">Footer</div>
+
+    </div>    
+</body>
+</html>
